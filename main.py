@@ -7,5 +7,7 @@ print("got ")
 # motor.run_forever()
 m = ev3.Motor('outA')
 
-m.run_to_rel_pos(position_sp=360, speed_sp=900, stop_action="hold")
+# m.run_to_rel_pos(position_sp=360, speed_sp=900, stop_action="hold")
+# time.sleep(5)
+m.run_direct(speed_sp=900, stop_action="hold")
 time.sleep(5)
