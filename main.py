@@ -9,7 +9,8 @@ m = ev3.Motor('outA')
 m.run_forever(speed_sp=500)
 
 time.sleep(5)
-m.run_forever(speed_sp=1000)
-
 m.stop(stop_action="coast")
+m.run_forever(speed_sp=1000)
+m.stop(stop_action="coast")
+
 time.sleep(5)
