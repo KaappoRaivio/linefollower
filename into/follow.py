@@ -4,12 +4,12 @@ leftMotor = ev3.LargeMotor("outA")
 rightMotor = ev3.LargeMotor("outB")
 
 colorSensor = ev3.ColorSensor("in1")
-colorSensor.mode "COL-REFLECT"
+colorSensor.mode = "COL-REFLECT"
 
 unit = leftMotor.count_per_rot
 
 while True:
-    intensity = colorSensor.read()
+    intensity = colorSensor.value()
     
     leftSpeed = intensity/100
     rightSpeed = (100-intensity)/100
