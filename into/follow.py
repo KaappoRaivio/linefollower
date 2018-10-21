@@ -14,6 +14,6 @@ while True:
     leftSpeed = intensity/100
     rightSpeed = (100-intensity)/100
 
-    leftMotor.run_forever(speed_sp=leftSpeed)
-    rightMotor.run_forever(speed_sp=rightSpeed)
+    leftMotor.run_forever(speed_sp=leftSpeed, stop_action="hold")
+    rightMotor.run_forever(speed_sp=rightSpeed, stop_action="hold")
 
