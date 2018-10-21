@@ -12,8 +12,8 @@ while True:
     intensity = colorSensor.value()
     print(intensity)
     
-    leftSpeed = intensity/100*unit
-    rightSpeed = (100-intensity)/100*unit
+    leftSpeed = -intensity/100*unit
+    rightSpeed = -(100-intensity)/100*unit
 
     leftMotor.run_forever(speed_sp=leftSpeed, stop_action="hold")
     rightMotor.run_forever(speed_sp=rightSpeed, stop_action="hold")
