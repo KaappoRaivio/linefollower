@@ -10,6 +10,7 @@ m.run_forever(speed_sp=500)
 
 time.sleep(5)
 m.stop(stop_action="coast")
+m.wait_until_not_moving(1.0)
 m.run_forever(speed_sp=1000)
 m.stop(stop_action="coast")
 
