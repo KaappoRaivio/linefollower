@@ -10,6 +10,7 @@ unit = leftMotor.count_per_rot
 
 while True:
     intensity = colorSensor.value()
+    print(intensity)
     
     leftSpeed = intensity/100
     rightSpeed = (100-intensity)/100
