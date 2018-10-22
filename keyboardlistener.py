@@ -2,7 +2,7 @@ import requests
 
 from pynput import keyboard
 
-KEYS_AlLOWED = "wasd"
+KEYS_AlLOWED = "wasdqe"
 
 
 def sendKey(address, key):

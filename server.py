@@ -44,7 +44,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         if string.split(":")[0] == "KEY UP" and postvars[b'key'][0].split(b':')[1].decode('utf-8')[1:] in KEYSDOWN:
             KEYSDOWN.remove(postvars[b'key'][0].split(b':')[1].decode('utf-8')[1:])
 
-        print(f"Keys currently pressed down: {KEYSDOWN}")
+        print(f"Keys currently pressed down: {''.join(KEYSDOWN)}")
 
 
         self.send_response(200)
