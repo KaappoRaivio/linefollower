@@ -2,7 +2,7 @@ import requests
 
 from pynput import keyboard
 
-KEYS_AlLOWED = "wasdqe"
+KEYS_INTERESTED = "wasdqe"
 
 
 def sendKey(address, key):
@@ -22,7 +22,7 @@ def _onPress(key):
     except:
         k = key.name  # other keys
 
-    if k in KEYS_AlLOWED:
+    if k in KEYS_INTERESTED:
         print(f"sending keydown {k}")
         sendKey("http://localhost:7000", keyDown(k))
 
@@ -35,7 +35,7 @@ def _onRelease(key):
     except:
         k = key.name  # other keys
 
-    if k in KEYS_AlLOWED:
+    if k in KEYS_INTERESTED:
 
         print(f"sending keyup {k}")
         sendKey("http://localhost:7000", keyUp(k))
